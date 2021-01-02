@@ -109,7 +109,7 @@ questions:
   default: "0x8000000"
   description: "Ethereum network gas limit"
   type: string
-  required: true
+  required: false
   label: geth genesis gasLimit
   group: "Geth Settings"
 - variable: geth.account.address
