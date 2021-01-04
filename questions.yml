@@ -47,7 +47,7 @@ questions:
   default: "my-secret-for-connecting-to-ethstats"
   description: "ethstats secret for posting data"
   type: string
-  required: true
+  required: false
   label: ethstats webSocketSecret
   group: "Ethstats Settings"
 - variable: ethstats.service.type
@@ -88,7 +88,7 @@ questions:
   default: "my-secret-account-password"
   description: "geth account secret"
   type: string
-  required: true
+  required: false
   label: geth miner account secret
   group: "Geth Settings"
 - variable: geth.genesis.networkId
@@ -130,6 +130,6 @@ questions:
   default: "SECRET"
   description: "Geth Account Secret"
   type: string
-  required: true
+  required: false
   label: Geth Account Secret
   group: "Geth Settings"
