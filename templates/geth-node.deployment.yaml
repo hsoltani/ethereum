@@ -29,7 +29,7 @@ spec:
         command: ["/bin/sh"]
         args: 
         - "-c"
-        - "geth --bootnodes=`cat /root/.ethereum/bootnodes` --rpc --rpcaddr 0.0.0.0 --rpcapi={{ .Values.geth.tx.args.rpcapi }} --rpccorsdomain='http://rpc.paas.khallagh.cloud' --ws --ws.api admin,personal,eth,net,web3 --networkid=${NETWORK_ID} --http --http.api admin,personal,eth,net,web3 --ethstats=${HOSTNAME}:${ETHSTATS_SECRET}@${ETHSTATS_SVC} --verbosity=5 "
+        - "geth --bootnodes "enode://fd566f4b529fca93d31bd7a90383c5c23378483998b20255c90cbaa70732500b7fd246394e5a57b3370c315a8fbe1b97d92e618f49337fcd74e2da44caf0771c@10.42.2.29:30302"` --rpc --rpcaddr 0.0.0.0 --rpcapi admin,personal,eth,net,web3 --ws --networkid=${NETWORK_ID} --ethstats=${HOSTNAME}:${ETHSTATS_SECRET}@${ETHSTATS_SVC} --verbosity=5 "
      ##   - "admin.addPeer("enode://0576ab41cebbdede7ba29df4cd60db8159efb5a144a3736bdc66bb4d4ab2501c277959d53f48a18c924256bc9fc1dbe5fdaa455f264c3afa687c92a1d3c1e0ec@10.42.2.19:30301")"
        ## command: ['sh', '-c', "admin.peers"]
         env:
