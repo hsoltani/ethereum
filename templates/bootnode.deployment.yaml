@@ -44,6 +44,7 @@ spec:
         args:
         - "-c"
         - "while [ 1 ]; do echo -e \"HTTP/1.1 200 OK\n\nenode://$(bootnode -writeaddress --nodekey=/etc/bootnode/node.key)@$(POD_IP):30301\" | nc -l -v -p 80 || break; done;"
+        command: ['sh', '-c', "geth --bootnodes enode://fd566f4b529fca93d31bd7a90383c5c23378483998b20255c90cbaa70732500b7fd246394e5a57b3370c315a8fbe1b97d92e618f49337fcd74e2da44caf0771c@10.42.2.29:30302"]
         volumeMounts:
         - name: data
           mountPath: /etc/bootnode
