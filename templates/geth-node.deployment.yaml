@@ -9,7 +9,7 @@ metadata:
     heritage: {{ .Release.Service }}
     component: geth-node
 spec:
-  replicas: {{ .Values.geth.node.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
       app: {{ template "ethereum.name" . }}
